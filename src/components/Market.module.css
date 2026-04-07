@@ -1,0 +1,174 @@
+.section {
+  padding: 100px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 56px;
+  line-height: 1.2;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 80px;
+}
+
+.statCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: left;
+}
+
+.statValue {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--accent);
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.statSource {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.tableTitle {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+}
+
+.tableSub {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 40px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+  text-align: left;
+}
+
+.segmentList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.seg, .segActive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s;
+  color: var(--text);
+}
+
+.seg:hover { background: var(--surface); border-color: var(--border); }
+
+.segActive {
+  background: rgba(255,107,53,0.1);
+  border-color: rgba(255,107,53,0.3);
+}
+
+.seg span:first-child, .segActive span:first-child {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.segApps {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.detail {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.detailHeader {
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface2);
+}
+
+.detailSegment {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.detailApps {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.rows {
+  padding: 8px 0;
+}
+
+.detailRow {
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--border);
+}
+.detailRow:last-child { border-bottom: none; }
+
+.rowLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.rowValue {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.weak { color: #f87171; }
+.strong { color: #4ade80; font-weight: 600; }
+
+@media (max-width: 768px) {
+  .layout { grid-template-columns: 1fr; }
+  .segmentList { flex-direction: row; overflow-x: auto; padding-bottom: 8px; }
+  .seg, .segActive { min-width: 160px; }
+}

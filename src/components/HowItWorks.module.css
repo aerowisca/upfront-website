@@ -1,0 +1,92 @@
+.section {
+  padding: 100px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin-bottom: 64px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0;
+  position: relative;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.num {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  transition: border-color 0.2s;
+}
+.content:hover { border-color: rgba(255,107,53,0.4); }
+
+.roleTag {
+  display: inline-block;
+  background: rgba(255,107,53,0.1);
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.stepIcon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.content h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.content p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.connector {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .steps { gap: 16px; }
+}

@@ -41,7 +41,6 @@ function RunnerHomeTask() {
       <div className={s.header}>
         <div><div className={s.greeting}>Hey, Arjun 👋</div><div className={s.sub}>Help someone nearby</div></div>
         <div className={s.headerRight}>
-          <div className={s.creditPill}>◈ 50</div>
           <div className={s.avatar}>A</div>
         </div>
       </div>
@@ -50,9 +49,9 @@ function RunnerHomeTask() {
         <div className={s.runnerCard}>
           <div className={s.runnerCardType}>📦 DELIVERY · 150m away</div>
           <div className={s.runnerCardTitle}>Get me Maggi from Sharma Dhaba</div>
-          <div className={s.runnerCardLoc}>📍 Sharma Dhaba → Hostel 4</div>
+          <div className={s.runnerCardLoc}>📍 Sharma Dhaba → Sector 4, B-12</div>
           <div className={s.runnerCardFooter}>
-            <div className={s.runnerCardCredits}>◈ 10 MC</div>
+            <div className={s.runnerCardCredits}>Earn ₹20</div>
             <div className={s.runnerCardDist}>2 min ago</div>
           </div>
         </div>
@@ -73,11 +72,11 @@ function TaskDetail() {
           <div className={s.detailType}>📦 DELIVERY</div>
           <div className={s.detailTitle}>Get me Maggi from Sharma Dhaba</div>
           <div className={s.detailRow}><span>📍 From</span><span>Sharma Dhaba</span></div>
-          <div className={s.detailRow}><span>🏁 To</span><span>Hostel 4</span></div>
-          <div className={s.detailRow}><span>⏰ Needed by</span><span>30 min</span></div>
-          <div className={s.detailRow}><span>◈ Credits</span><span style={{ color: '#FF6B35', fontWeight: 700 }}>10 MC</span></div>
+          <div className={s.detailRow}><span>🏁 To</span><span>Sector 4, B-12</span></div>
+          <div className={s.detailRow}><span>💰 Item cost</span><span>₹60 (you pay)</span></div>
+          <div className={s.detailRow}><span>✨ You earn</span><span style={{ color: '#00D4AA', fontWeight: 700 }}>₹80 on completion</span></div>
         </div>
-        <div className={s.acceptBtn}>Accept Task ✓</div>
+        <div className={s.acceptBtn}>Accept & Buy Item ✓</div>
         <div className={s.skipBtn}>Skip →</div>
       </div>
     </>
@@ -95,9 +94,9 @@ function RunnerChat() {
         </div>
       </div>
       <div className={s.body}>
-        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>✅ You accepted this task</div>
-        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>📍 Sharma Dhaba → Hostel 4 · ◈ 10 MC</div>
-        <div className={`${s.chatBubble} ${s.bubbleMe}`}>On my way! 10 mins 🏃</div>
+        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>✅ You accepted. Buy the item & deliver.</div>
+        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>📍 Sharma Dhaba → Sector 4, B-12</div>
+        <div className={`${s.chatBubble} ${s.bubbleMe}`}>Bought it! On my way 🏃</div>
         <div className={s.proofBtn}>Submit Proof 📸</div>
       </div>
     </>
@@ -115,12 +114,11 @@ function RunnerDone() {
         </div>
       </div>
       <div className={s.body}>
-        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>🎉 Creator confirmed! Credits received.</div>
+        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>🎉 Confirmed! ₹80 sent to your account.</div>
         <div className={s.doneWrap}>
           <div className={s.doneEmoji}>🎉</div>
-          <div className={s.doneTitle}>Credits Received!</div>
-          <div className={`${s.creditDelta} ${s.creditPlus}`}>◈ +10 MC</div>
-          <div className={s.balanceRow}><span>Balance</span><span className={s.balanceVal}>◈ 60 MC</span></div>
+          <div className={s.doneTitle}>₹80 Received!</div>
+          <div className={s.doneSub}>Item cost ₹60 + delivery fee ₹20</div>
         </div>
       </div>
     </>

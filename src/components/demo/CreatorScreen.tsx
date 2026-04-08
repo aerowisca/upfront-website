@@ -45,44 +45,38 @@ function CreateTask() {
     <>
       <div className={s.header}>
         <div className={s.backBtn}>←</div>
-        <div className={s.heading}>New Task</div>
-        <div className={s.headingSub}>Tell us what you need done</div>
+        <div><div className={s.heading}>New Task</div><div className={s.headingSub}>What do you need?</div></div>
       </div>
       <div className={s.body}>
-        <div className={s.fieldLabel}>WHAT DO YOU NEED? *</div>
+        <div className={s.fieldLabel}>TASK</div>
         <div className={s.inputFilled}>Get me Maggi from Sharma Dhaba</div>
-
-        <div className={s.fieldLabel}>TASK TYPE</div>
+        <div className={s.fieldLabel}>TYPE</div>
         <div className={s.toggle}>
           <div className={s.toggleBtn}>ℹ️ Info</div>
           <div className={`${s.toggleBtn} ${s.toggleActive}`}>📦 Delivery</div>
         </div>
-
         <div className={s.row}>
           <div className={s.halfField}>
-            <div className={s.fieldLabel}>FROM *</div>
+            <div className={s.fieldLabel}>FROM</div>
             <div className={s.locationPill}>Sharma Dhaba</div>
           </div>
           <div className={s.halfField}>
-            <div className={s.fieldLabel}>TO *</div>
-            <div className={s.locationPill}>Hostel 4</div>
+            <div className={s.fieldLabel}>TO</div>
+            <div className={s.locationPill}>Sector 4, B-12</div>
           </div>
         </div>
-
-        <div className={s.fieldLabel}>NEEDED BY</div>
-        <div className={s.toggle}>
-          <div className={s.toggleBtn}>⚡ ASAP</div>
-          <div className={`${s.toggleBtn} ${s.toggleActive}`}>30 min</div>
-          <div className={s.toggleBtn}>1 hr</div>
+        <div className={s.escrowRow}>
+          <div className={s.escrowItem}><span>Item cost</span><span>₹60</span></div>
+          <div className={s.escrowItem}><span>Delivery fee</span><span>₹20</span></div>
+          <div className={s.escrowTotal}><span>Escrow total</span><span>₹80</span></div>
         </div>
       </div>
       <div className={s.footer}>
-        <div className={s.submitBtn}>Post Task →</div>
+        <div className={s.submitBtn}>Post & Pay ₹80 →</div>
       </div>
     </>
   )
 }
-
 function TaskChatWaiting() {
   return (
     <>
@@ -94,7 +88,7 @@ function TaskChatWaiting() {
         </div>
       </div>
       <div className={s.body}>
-        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>Task posted! Looking for a runner nearby…</div>
+        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>✅ ₹80 held in escrow. Looking for a runner…</div>
         <div className={s.waiting}>
           <div className={s.sonarRing}><div className={s.sonarInner}>🔍</div></div>
           <div className={s.waitSub}>Scanning for runners nearby…</div>
@@ -115,11 +109,11 @@ function TaskChatProof() {
         </div>
       </div>
       <div className={s.body}>
-        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>🤝 Runner accepted your task!</div>
-        <div className={`${s.chatBubble} ${s.bubbleThem}`}>On my way! 10 mins 🏃</div>
+        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>🤝 Runner accepted & bought the item!</div>
+        <div className={`${s.chatBubble} ${s.bubbleThem}`}>Delivered! Here's your Maggi 🍜</div>
         <div className={`${s.chatBubble} ${s.bubbleSystem}`}>📎 Runner submitted proof</div>
         <div className={s.proofImg}>🍜</div>
-        <div className={s.confirmBtn}>Confirm & Pay ✓</div>
+        <div className={s.confirmBtn}>Confirm & Release ₹80 ✓</div>
         <div className={s.rejectBtn}>Reject Proof</div>
       </div>
     </>
@@ -137,12 +131,11 @@ function TaskChatDone() {
         </div>
       </div>
       <div className={s.body}>
-        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>✅ Task confirmed! Credits transferred.</div>
+        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>✅ Confirmed! ₹80 released to runner.</div>
         <div className={s.doneWrap}>
           <div className={s.doneEmoji}>✅</div>
           <div className={s.doneTitle}>Task Complete!</div>
-          <div className={`${s.creditDelta} ${s.creditMinus}`}>◈ −10 MC</div>
-          <div className={s.balanceRow}><span>Balance</span><span className={s.balanceVal}>◈ 40 MC</span></div>
+          <div className={s.doneSub}>₹80 released from escrow</div>
         </div>
       </div>
     </>

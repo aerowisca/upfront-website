@@ -14,7 +14,7 @@ export function Hero() {
         No corporate middlemen. Just humans helping humans.
       </p>
       <div className={s.actions}>
-        <a href="mailto:aerowisca@gmail.com" className={s.primary}>Join the Waitlist</a>
+        <a href="https://forms.gle/gLYn4YehwdNHz912A" target="_blank" rel="noopener noreferrer" className={s.primary}>Join the Waitlist</a>
         <a href="#how" className={s.secondary}>See how it works ↓</a>
       </div>
       <div className={s.stats}>

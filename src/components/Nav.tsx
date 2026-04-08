@@ -17,7 +17,7 @@ export function Nav({ tab, setTab }: Props) {
           🎓 IIT ISM
         </button>
       </div>
-      <a href="mailto:aerowisca@gmail.com" className={s.cta}>Get Early Access</a>
+      <a href="https://forms.gle/gLYn4YehwdNHz912A" target="_blank" rel="noopener noreferrer" className={s.cta}>Get Early Access</a>
     </nav>
   )
 }

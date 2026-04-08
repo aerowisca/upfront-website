@@ -56,6 +56,9 @@
   overflow: hidden;
   background: #0D0D0D;
 }
+@media (max-width: 680px) {
+  .screen { min-height: 360px; }
+}
 .homeBar {
   height: 20px;
   display: flex;
@@ -89,9 +92,12 @@
 .play:hover { opacity: 0.85; }
 
 @media (max-width: 680px) {
-  .phones { flex-direction: column; gap: 24px; }
-  .divider { flex-direction: row; }
-  .divider div { width: 60px; height: 1px; }
-  .phone { width: 100%; max-width: 280px; }
+  .phones { flex-direction: row; gap: 12px; align-items: flex-start; }
+  .phone { width: calc(50vw - 32px); max-width: 180px; }
+  .screen { min-height: 360px; font-size: 10px; }
+  .divider { flex-direction: column; }
+  .divider div { width: 1px; height: 40px; }
   .stepL { display: none; }
+  .stepBar { gap: 4px; }
+  .step, .stepActive { padding: 6px 10px; }
 }

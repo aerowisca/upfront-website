@@ -68,7 +68,7 @@ function CreateTask({ c }: { c: DemoConfig }) {
         <div className={s.escrowRow}>
           {c.itemCost !== '₹0' && <div className={s.escrowItem}><span>Item cost</span><span>{c.itemCost}</span></div>}
           <div className={s.escrowItem}><span>Delivery fee</span><span>{c.deliveryFee}</span></div>
-          <div className={s.escrowTotal}><span>Escrow total</span><span>{c.total}</span></div>
+          <div className={s.escrowTotal}><span>Total</span><span>{c.total}</span></div>
         </div>
       </div>
       <div className={s.footer}>

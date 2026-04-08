@@ -53,7 +53,7 @@
 
 /* Chat header */
 .chatHeader { display: flex; align-items: center; gap: 10px; padding: 8px 14px 10px; border-bottom: 1px solid #2A2520; }
-.chatTitle { font-size: 12px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+.chatTitle { font-size: 12px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: min(120px, 35cqi); }
 .statusBadge { display: inline-block; padding: 2px 6px; border-radius: 999px; font-size: 9px; font-weight: 600; margin-top: 2px; }
 
 /* Buttons */
@@ -91,8 +91,8 @@
 .toggleBtn { flex: 1; height: 38px; border-radius: 10px; border: 1.5px solid #2A2520; display: flex; align-items: center; justify-content: center; gap: 4px; background: #1A1A1A; font-size: 12px; font-weight: 700; color: #8A8070; }
 .toggleActive { background: rgba(255,107,53,0.13); border-color: #FF6B35; color: #FF6B35; }
 .row { display: flex; gap: 6px; }
-.halfField { flex: 1; display: flex; flex-direction: column; gap: 4px; }
-.locationPill { background: #1A1A1A; border: 1.5px solid #2A2520; border-radius: 10px; padding: 8px 10px; font-size: 11px; color: #F5F0E8; }
+.halfField { flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.locationPill { background: #1A1A1A; border: 1.5px solid #2A2520; border-radius: 10px; padding: 8px 10px; font-size: 11px; color: #F5F0E8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* Section label */
 .sectionLabel { font-size: 9px; font-weight: 700; letter-spacing: 2px; color: #6B6560; }
@@ -110,8 +110,9 @@
 .detailCard { background: #1A1A1A; border: 1px solid #2A2520; border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
 .detailType { font-size: 9px; font-weight: 700; letter-spacing: 1px; color: #FF6B35; }
 .detailTitle { font-size: 13px; font-weight: 700; }
-.detailRow { display: flex; justify-content: space-between; font-size: 11px; }
-.detailRow span:first-child { color: #6B6560; }
+.detailRow { display: flex; justify-content: space-between; font-size: 11px; gap: 4px; }
+.detailRow span:first-child { color: #6B6560; flex-shrink: 0; }
+.detailRow span:last-child { text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 55%; }
 
 /* Chat */
 .chatBubble { padding: 6px 10px; border-radius: 10px; font-size: 11px; line-height: 1.4; max-width: 85%; }

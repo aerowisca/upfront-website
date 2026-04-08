@@ -60,7 +60,7 @@ export function AppDemo({ config = WORLD_CONFIG }: { config?: DemoConfig }) {
   }, [auto])
 
   return (
-    <div className={s.wrap}>
+    <div className={s.wrap} id="demo">
       <div className={s.label}>LIVE DEMO</div>
       <h2 className={s.title}>See it in action.</h2>
       <p className={s.sub}>A real task, from post to completion.</p>

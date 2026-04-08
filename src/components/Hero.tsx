@@ -15,7 +15,7 @@ export function Hero() {
       </p>
       <div className={s.actions}>
         <a href="https://forms.gle/gLYn4YehwdNHz912A" target="_blank" rel="noopener noreferrer" className={s.primary}>Join the Waitlist</a>
-        <a href="#how" className={s.secondary}>See how it works ↓</a>
+        <a href="#demo" className={s.secondary}>See how it works ↓</a>
       </div>
       <div className={s.stats}>
         <div className={s.stat}><span>$42B</span><p>India quick commerce by 2030</p></div>

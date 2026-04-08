@@ -42,7 +42,7 @@ export function Campus() {
           using Moral Credits instead of money. No social inequality. Just pure mutual aid.
         </p>
         <a
-          href="https://expo.dev/artifacts/eas/x42zaWMXCwSTCke92P9NVC.apk"
+          href="https://expo.dev/artifacts/eas/q52HfqrU5KHKDAsEd5ZTmE.apk"
           className={s.download}
           target="_blank"
           rel="noopener noreferrer"

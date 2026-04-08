@@ -1,6 +1,28 @@
 import s from './Campus.module.css'
 import { AppDemo } from './AppDemo'
 
+const CAMPUS_CONFIG = {
+  creatorName: 'Aryan',
+  runnerName: 'Priya',
+  taskTitle: 'Anyone near library? Need printouts brought to Aquamarine!',
+  taskType: 'DELIVERY' as const,
+  from: 'Library Print Shop',
+  to: 'Aquamarine Hostel',
+  itemCost: '₹0',
+  deliveryFee: '5 MC',
+  total: '5 MC',
+  proofEmoji: '📄',
+  currency: 'MC',
+  chatMessages: [
+    { from: 'system' as const, text: '✅ Priya accepted your task' },
+    { from: 'them' as const, text: 'bro the printout is costing ₹10' },
+    { from: 'me' as const, text: 'send me your UPI QR 👍' },
+    { from: 'them' as const, text: '📷 [QR Code]' },
+    { from: 'system' as const, text: '💸 ₹10 paid via UPI' },
+    { from: 'them' as const, text: 'got it! on my way to Aquamarine 🏃' },
+  ],
+}
+
 const usecases = [
   { icon: '📚', title: 'Library Shop Runs', desc: 'Need stationery, printouts or a book from the library shop? Post a task — a batchmate nearby will grab it for you.' },
   { icon: '💡', title: 'Campus Info Checks', desc: 'Is the library open? Is there power in the lab? Is the canteen serving today? Get real-time answers from someone already there.' },
@@ -53,7 +75,7 @@ export function Campus() {
           <h2>Moral Credits, not money.</h2>
           <p>
             On campus, we use Moral Credits — a non-monetary exchange system. Help someone and earn credits.
-            Need help? Spend credits. No real money changes hands, so there's no financial pressure or social inequality among students.
+            Need help? Spend credits. No real money changes hands — just pure mutual aid.
           </p>
           <div className={s.creditStats}>
             <div><span>50</span><p>Credits on signup</p></div>
@@ -63,27 +85,7 @@ export function Campus() {
         </div>
       </section>
 
-      <AppDemo />
-
-      <section className={s.howSection}>
-        <h2 className={s.sectionTitle}>How the campus app works</h2>
-        <div className={s.steps}>
-          {[
-            { n: '1', t: 'Sign in', d: 'Use your @iitism.ac.in Google account. No other accounts allowed.' },
-            { n: '2', t: 'Choose your mode', d: 'Switch between Creator (need help) and Runner (help others) anytime.' },
-            { n: '3', t: 'Post or accept tasks', d: 'Creators post tasks with location. Runners nearby see them and accept.' },
-            { n: '4', t: 'Complete & earn', d: 'Runner submits proof. Creator confirms. Credits transfer instantly.' },
-          ].map(step => (
-            <div key={step.n} className={s.step}>
-              <div className={s.stepNum}>{step.n}</div>
-              <div>
-                <div className={s.stepTitle}>{step.t}</div>
-                <div className={s.stepDesc}>{step.d}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <AppDemo config={CAMPUS_CONFIG} />
     </div>
   )
 }

@@ -5,6 +5,35 @@ import { RunnerScreen } from './demo/RunnerScreen'
 
 export type DemoStep = 0 | 1 | 2 | 3 | 4
 
+export type DemoConfig = {
+  creatorName: string
+  runnerName: string
+  taskTitle: string
+  taskType: 'DELIVERY' | 'INFO'
+  from: string
+  to: string
+  itemCost: string
+  deliveryFee: string
+  total: string
+  proofEmoji: string
+  currency: string // '₹' or 'MC'
+  chatMessages?: Array<{ from: 'me' | 'them' | 'system'; text: string }>
+}
+
+const WORLD_CONFIG: DemoConfig = {
+  creatorName: 'Priya',
+  runnerName: 'Rahul',
+  taskTitle: 'Need medicine from Apollo — anyone heading that way?',
+  taskType: 'DELIVERY',
+  from: 'Apollo Pharmacy, Sector 12',
+  to: 'Tower B, Apt 304',
+  itemCost: '₹180',
+  deliveryFee: '₹30',
+  total: '₹210',
+  proofEmoji: '💊',
+  currency: '₹',
+}
+
 const STEP_LABELS = [
   'Creator Home',
   'Create Task screen',
@@ -13,7 +42,7 @@ const STEP_LABELS = [
   'Task complete ✅',
 ]
 
-export function AppDemo() {
+export function AppDemo({ config = WORLD_CONFIG }: { config?: DemoConfig }) {
   const [step, setStep] = useState<DemoStep>(0)
   const [auto, setAuto] = useState(false)
   const timer = useRef<ReturnType<typeof setInterval> | null>(null)
@@ -49,12 +78,12 @@ export function AppDemo() {
       <div className={s.phones}>
         <div className={s.side}>
           <div className={s.role}>👤 Creator</div>
-          <Phone><CreatorScreen step={step} /></Phone>
+          <Phone><CreatorScreen step={step} config={config} /></Phone>
         </div>
         <div className={s.divider}><div /><span>⚡</span><div /></div>
         <div className={s.side}>
           <div className={s.role}>🏃 Runner</div>
-          <Phone><RunnerScreen step={step} /></Phone>
+          <Phone><RunnerScreen step={step} config={config} /></Phone>
         </div>
       </div>
 

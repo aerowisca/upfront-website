@@ -52,7 +52,7 @@ export function Market() {
 
   return (
     <section className={s.section}>
-      <div className={s.label}>MARKET OPPORTUNITY</div>
+      <div className={s.label}>FOR INVESTORS · MARKET OPPORTUNITY</div>
       <h2 className={s.title}>A $42B market with no<br />true P2P player.</h2>
 
       <div className={s.statsGrid}>

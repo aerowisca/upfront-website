@@ -5,6 +5,7 @@ import { Hero } from './components/Hero'
 import { Problem } from './components/Problem'
 import { HowItWorks } from './components/HowItWorks'
 import { UseCases } from './components/UseCases'
+import { AppDemo } from './components/AppDemo'
 import { Trust } from './components/Trust'
 import { Market } from './components/Market'
 import { Campus } from './components/Campus'
@@ -19,10 +20,10 @@ export default function App() {
       {tab === 'world' ? (
         <>
           <Hero />
+          <AppDemo />
           <Problem />
           <HowItWorks />
           <UseCases />
-          <Trust />
           <Market />
         </>
       ) : (

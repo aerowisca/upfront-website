@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+# upFront — Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing website for the upFront mutual aid platform. Built with React + Vite.
 
-Currently, two official plugins are available:
+## Stack
+- **Framework**: React + TypeScript (Vite)
+- **Styling**: CSS Modules
+- **Deployed on**: Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Structure
+```
+src/
+  components/
+    Nav.tsx           — Fixed navigation with Platform / IIT ISM tab switcher
+    Hero.tsx          — Hero section with tagline and waitlist CTA
+    Problem.tsx       — Problem statement (3 cards)
+    HowItWorks.tsx    — 4-step explainer
+    UseCases.tsx      — Interactive use case explorer (6 cases)
+    AppDemo.tsx       — Interactive phone mockup demo (configurable)
+    Market.tsx        — Market opportunity + competitor comparison
+    Campus.tsx        — IIT ISM tab (use cases, Moral Credits, APK download)
+    Footer.tsx
+    demo/
+      CreatorScreen.tsx  — Creator phone mockup screens
+      RunnerScreen.tsx   — Runner phone mockup screens
+      screen.module.css  — Shared app-like styles matching real app theme
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Two Tabs
+- **Platform** — Real-world use cases, escrow payment model, investor-focused market data
+- **IIT ISM** — Campus-specific use cases, Moral Credits system, APK download link
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Local Setup
+```bash
+npm install
+npm run dev
 ```
+
+## Build & Deploy
+```bash
+npm run build   # outputs to dist/
+```
+Deploy `dist/` to Vercel — auto-detects Vite, no config needed.
+
+## Key Links
+- Waitlist form: https://forms.gle/gLYn4YehwdNHz912A
+- APK download: https://expo.dev/artifacts/eas/x42zaWMXCwSTCke92P9NVC.apk
+- Backend: https://upfront-backend-production.up.railway.app

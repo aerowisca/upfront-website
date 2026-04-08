@@ -111,18 +111,19 @@ function RunnerDone({ c }: { c: DemoConfig }) {
     <>
       <div className={s.chatHeader}>
         <div className={s.backBtn}>←</div>
-        <div>
+        <div style={{ flex: 1, minWidth: 0 }}>
           <div className={s.chatTitle}>{c.taskTitle}</div>
-          <div className={s.statusBadge} style={{ background: '#00D4AA22', color: '#00D4AA' }}>✅ Completed</div>
         </div>
+        <div className={s.creditPill}>+{c.deliveryFee}</div>
+      </div>
+      <div className={s.completionCardAccent}>
+        <div className={s.completionIcon}>🎉</div>
+        <div className={s.completionTitle} style={{ color: '#FF6B35' }}>Task Completed!</div>
+        <div className={s.completionSub}>+{c.deliveryFee} Moral Credits earned</div>
       </div>
       <div className={s.body}>
-        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>🎉 Confirmed! {c.total} sent to your account.</div>
-        <div className={s.doneWrap}>
-          <div className={s.doneEmoji}>🎉</div>
-          <div className={s.doneTitle}>{c.total} Received!</div>
-          <div className={s.doneSub}>Task complete</div>
-        </div>
+        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>🎉 Confirmed! Credits added to your account.</div>
+        <div className={`${s.chatBubble} ${s.bubbleMe}`}>Thanks! 🙌</div>
       </div>
     </>
   )

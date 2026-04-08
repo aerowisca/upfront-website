@@ -132,18 +132,19 @@ function TaskChatDone({ c }: { c: DemoConfig }) {
     <>
       <div className={s.chatHeader}>
         <div className={s.backBtn}>←</div>
-        <div>
+        <div style={{ flex: 1, minWidth: 0 }}>
           <div className={s.chatTitle}>{c.taskTitle}</div>
-          <div className={s.statusBadge} style={{ background: '#00D4AA22', color: '#00D4AA' }}>✅ Completed</div>
         </div>
+        <div className={s.creditPill}>◈ {c.deliveryFee}</div>
+      </div>
+      <div className={s.completionCard}>
+        <div className={s.completionIcon}>✅</div>
+        <div className={s.completionTitle}>Task Completed</div>
+        <div className={s.completionSub}>{c.deliveryFee} Moral Credits paid to runner</div>
       </div>
       <div className={s.body}>
-        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>✅ Confirmed! {c.total} released to runner.</div>
-        <div className={s.doneWrap}>
-          <div className={s.doneEmoji}>✅</div>
-          <div className={s.doneTitle}>Task Complete!</div>
-          <div className={s.doneSub}>{c.total} released from escrow</div>
-        </div>
+        <div className={`${s.chatBubble} ${s.bubbleSystem}`}>✅ Confirmed! Payment released to runner.</div>
+        <div className={`${s.chatBubble} ${s.bubbleThem}`}>Thanks! 🙌</div>
       </div>
     </>
   )

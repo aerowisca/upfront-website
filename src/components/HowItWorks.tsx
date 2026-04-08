@@ -1,10 +1,10 @@
 import s from './HowItWorks.module.css'
 
 const steps = [
-  { n: '01', role: 'Creator', icon: '📍', title: 'Post a task', desc: 'Describe what you need — a pickup, delivery, info check, or anything else. Set your location and pay upfront into escrow.' },
+  { n: '01', role: 'Creator', icon: '📍', title: 'Post & pay into escrow', desc: 'Describe what you need. Pay the item cost + delivery fee upfront into escrow. Funds are locked — nobody gets them until the task is done.' },
   { n: '02', role: 'Platform', icon: '⚡', title: 'Smart matching', desc: 'upFront finds runners already near your location or heading your way. Real-time GPS matching, zero wasted trips.' },
-  { n: '03', role: 'Runner', icon: '🏃', title: 'Accept & complete', desc: 'A runner accepts, uses their own money to fulfill the task, submits proof. They\'re bound by contract — skin in the game.' },
-  { n: '04', role: 'Both', icon: '✅', title: 'Confirm & get paid', desc: 'Creator confirms. Runner gets reimbursed + their fee instantly. Disputes? Our system protects both sides.' },
+  { n: '03', role: 'Runner', icon: '🏃', title: 'Buy with own money', desc: 'Runner accepts and buys the item using their own money. This creates a binding financial contract — they\'re committed to completing the task.' },
+  { n: '04', role: 'Both', icon: '✅', title: 'Confirm & get paid', desc: 'Runner submits proof. Creator confirms. App releases item cost + delivery fee to runner instantly. Disputes? Our system protects both sides.' },
 ]
 
 export function HowItWorks() {

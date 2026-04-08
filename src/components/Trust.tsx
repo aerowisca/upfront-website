@@ -4,32 +4,32 @@ const pillars = [
   {
     icon: '🔒',
     title: 'Escrow Payment',
-    desc: 'Creators pay upfront into escrow. Money is locked until the task is confirmed complete. No payment, no release.',
+    desc: 'Creator pays item cost + delivery fee into escrow before the task starts. Funds are locked — nobody touches them until completion.',
   },
   {
     icon: '💰',
     title: 'Runner\'s Skin in the Game',
-    desc: 'Runners use their own money to fulfill tasks. This creates a binding contract — they\'re financially committed to completing the job.',
+    desc: 'Runner buys the item with their own money. They\'re financially committed — if they don\'t deliver, they lose what they spent.',
   },
   {
     icon: '📸',
     title: 'Proof of Completion',
-    desc: 'Runners submit photo or video proof before payment releases. Creators review and confirm. No proof, no pay.',
+    desc: 'Runner submits photo or video proof of delivery. Creator reviews before funds release. No proof, no pay.',
+  },
+  {
+    icon: '💸',
+    title: 'Instant Payout',
+    desc: 'Creator confirms → app releases item cost + delivery fee to runner instantly. Runner gets reimbursed and earns their fee in one transfer.',
   },
   {
     icon: '⚖️',
     title: 'Dispute Resolution',
-    desc: 'Either party can raise a dispute. Our system freezes funds and reviews evidence. Fair outcomes, every time.',
-  },
-  {
-    icon: '⭐',
-    title: 'Trust Scoring',
-    desc: 'Every user builds a trust score. Repeated violations lock accounts. Good actors get priority matching.',
+    desc: 'Either party can raise a dispute. Funds stay frozen. Our system reviews evidence and releases to the rightful party.',
   },
   {
     icon: '🚫',
     title: 'Penalty System',
-    desc: 'Cancellations cost money. Dropping a task mid-way incurs a penalty. This keeps both sides accountable.',
+    desc: 'Cancellations and drops cost money. Creators who cancel mid-task pay a penalty to the runner. Accountability on both sides.',
   },
 ]
 

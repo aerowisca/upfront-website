@@ -1,0 +1,101 @@
+/* Base */
+.screen { display: flex; flex-direction: column; height: 100%; background: #0D0D0D; color: #F5F0E8; font-size: 14px; }
+.statusBar { display: flex; justify-content: space-between; padding: 8px 20px 4px; font-size: 11px; font-weight: 700; }
+.body { flex: 1; overflow: hidden; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.footer { padding: 16px; border-top: 1px solid #2A2520; }
+
+/* Header */
+.header { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px 12px; border-bottom: 1px solid #2A2520; }
+.greeting { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; }
+.sub { font-size: 11px; color: #6B6560; margin-top: 2px; }
+.headerRight { display: flex; align-items: center; gap: 8px; }
+.creditPill { background: rgba(255,107,53,0.13); border: 1px solid rgba(255,107,53,0.3); color: #FF6B35; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+.avatar { width: 34px; height: 34px; border-radius: 17px; background: rgba(255,107,53,0.13); border: 1.5px solid rgba(255,107,53,0.35); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 800; color: #FF6B35; }
+
+/* CreateTask header */
+.backBtn { color: #F5F0E8; font-size: 24px; font-weight: 300; margin-bottom: 8px; cursor: pointer; }
+.heading { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 2px; }
+.headingSub { font-size: 11px; color: #6B6560; }
+
+/* Chat header */
+.chatHeader { display: flex; align-items: center; gap: 12px; padding: 10px 16px 12px; border-bottom: 1px solid #2A2520; }
+.chatTitle { font-size: 14px; font-weight: 700; }
+.statusBadge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; margin-top: 3px; }
+
+/* Buttons */
+.postBtn { background: #FF6B35; border-radius: 999px; height: 48px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #0D0D0D; }
+.submitBtn { background: #FF6B35; border-radius: 14px; height: 52px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 800; color: #0D0D0D; }
+.acceptBtn { background: #FF6B35; border-radius: 12px; padding: 10px; text-align: center; font-size: 13px; font-weight: 800; color: #0D0D0D; margin-top: 4px; }
+.skipBtn { background: transparent; border: 1px solid #2A2520; border-radius: 12px; padding: 10px; text-align: center; font-size: 13px; color: #6B6560; }
+.confirmBtn { background: #00D4AA; border-radius: 12px; padding: 12px; text-align: center; font-size: 14px; font-weight: 800; color: #0D0D0D; }
+.rejectBtn { background: transparent; border: 1px solid #2A2520; border-radius: 12px; padding: 10px; text-align: center; font-size: 12px; color: #6B6560; }
+.proofBtn { background: #FF6B35; border-radius: 12px; padding: 10px; text-align: center; font-size: 13px; font-weight: 800; color: #0D0D0D; margin-top: auto; }
+
+/* Announcement */
+.annBanner { background: #1A1A1A; border: 1px solid rgba(255,107,53,0.3); border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; gap: 8px; }
+.annTitle { font-size: 12px; font-weight: 700; }
+.annBody { font-size: 11px; color: #6B6560; }
+.annArrow { color: #FF6B35; font-size: 16px; margin-left: auto; }
+
+/* Empty */
+.empty { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+.emptyIcon { font-size: 40px; }
+.emptyText { font-size: 12px; color: #6B6560; text-align: center; line-height: 1.6; white-space: pre-line; }
+
+/* Waiting */
+.waiting { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; }
+.sonarRing { width: 80px; height: 80px; border-radius: 50%; border: 2px solid rgba(255,107,53,0.4); display: flex; align-items: center; justify-content: center; animation: sonar 1.5s ease-out infinite; }
+@keyframes sonar { 0% { box-shadow: 0 0 0 0 rgba(255,107,53,0.4); } 100% { box-shadow: 0 0 0 24px rgba(255,107,53,0); } }
+.sonarInner { font-size: 28px; }
+.waitTitle { font-size: 14px; font-weight: 700; }
+.waitSub { font-size: 11px; color: #6B6560; text-align: center; white-space: pre-line; }
+
+/* Form fields */
+.fieldLabel { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #6B6560; margin-bottom: 6px; margin-top: 4px; }
+.inputFilled { background: #1A1A1A; border: 1.5px solid #2A2520; border-radius: 12px; padding: 12px; font-size: 14px; color: #F5F0E8; }
+.toggle { display: flex; gap: 6px; }
+.toggleBtn { flex: 1; height: 48px; border-radius: 12px; border: 1.5px solid #2A2520; display: flex; align-items: center; justify-content: center; gap: 6px; background: #1A1A1A; font-size: 14px; font-weight: 700; color: #8A8070; }
+.toggleActive { background: rgba(255,107,53,0.13); border-color: #FF6B35; color: #FF6B35; }
+.row { display: flex; gap: 8px; }
+.halfField { flex: 1; }
+.locationPill { background: #1A1A1A; border: 1.5px solid #2A2520; border-radius: 12px; padding: 10px 12px; font-size: 13px; color: #F5F0E8; }
+
+/* Section label */
+.sectionLabel { font-size: 10px; font-weight: 700; letter-spacing: 2px; color: #6B6560; margin-top: 4px; }
+
+/* Runner task card */
+.runnerCard { background: #1A1A1A; border: 1px solid rgba(255,107,53,0.35); border-radius: 16px; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.runnerCardType { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #FF6B35; }
+.runnerCardTitle { font-size: 14px; font-weight: 700; }
+.runnerCardLoc { font-size: 11px; color: #6B6560; }
+.runnerCardFooter { display: flex; justify-content: space-between; align-items: center; }
+.runnerCardCredits { font-size: 14px; font-weight: 800; color: #FF6B35; }
+.runnerCardDist { font-size: 11px; color: #6B6560; }
+
+/* Task detail */
+.detailCard { background: #1A1A1A; border: 1px solid #2A2520; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
+.detailType { font-size: 10px; font-weight: 700; letter-spacing: 1px; color: #FF6B35; }
+.detailTitle { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.detailRow { display: flex; justify-content: space-between; font-size: 13px; }
+.detailRow span:first-child { color: #6B6560; }
+
+/* Chat */
+.chatBody { flex: 1; display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
+.chatBubble { padding: 8px 12px; border-radius: 12px; font-size: 12px; line-height: 1.5; max-width: 85%; }
+.bubbleSystem { background: #1A1A1A; border: 1px solid #2A2520; color: #6B6560; align-self: center; text-align: center; font-size: 11px; border-radius: 10px; }
+.bubbleMe { background: #FF6B35; color: #0D0D0D; font-weight: 600; align-self: flex-end; }
+.bubbleThem { background: #1A1A1A; border: 1px solid #2A2520; align-self: flex-start; }
+
+/* Proof */
+.proofImg { background: #1A1A1A; border: 1px solid #2A2520; border-radius: 14px; padding: 24px; text-align: center; font-size: 52px; }
+
+/* Done */
+.doneWrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+.doneEmoji { font-size: 52px; }
+.doneTitle { font-size: 18px; font-weight: 900; }
+.doneSub { font-size: 12px; color: #6B6560; }
+.creditDelta { font-size: 24px; font-weight: 900; }
+.creditMinus { color: #FF4757; }
+.creditPlus { color: #00D4AA; }
+.balanceRow { display: flex; justify-content: space-between; width: 100%; background: #1A1A1A; border: 1px solid #2A2520; border-radius: 12px; padding: 10px 14px; font-size: 13px; }
+.balanceVal { font-weight: 700; color: #FF6B35; }

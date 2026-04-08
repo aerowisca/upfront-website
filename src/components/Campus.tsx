@@ -1,4 +1,5 @@
 import s from './Campus.module.css'
+import { AppDemo } from './AppDemo'
 
 const usecases = [
   { icon: '📚', title: 'Library Shop Runs', desc: 'Need stationery, printouts or a book from the library shop? Post a task — a batchmate nearby will grab it for you.' },
@@ -61,6 +62,8 @@ export function Campus() {
           </div>
         </div>
       </section>
+
+      <AppDemo />
 
       <section className={s.howSection}>
         <h2 className={s.sectionTitle}>How the campus app works</h2>

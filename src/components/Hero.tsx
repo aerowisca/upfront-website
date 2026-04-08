@@ -10,7 +10,8 @@ export function Hero() {
       </h1>
       <p className={s.sub}>
         upFront connects people who need things done with people already going that way.
-        No corporate middlemen. No dark stores. Just humans helping humans — and getting paid for it.
+        Pay into escrow, a runner buys with their own money, gets reimbursed + fee on delivery.
+        No corporate middlemen. Just humans helping humans.
       </p>
       <div className={s.actions}>
         <a href="mailto:aerowisca@gmail.com" className={s.primary}>Join the Waitlist</a>

@@ -90,11 +90,16 @@
 .play:hover { opacity: 0.85; }
 
 @media (max-width: 680px) {
-  .phones { flex-direction: row; gap: 12px; align-items: flex-start; }
-  .phone { width: calc(50vw - 32px); border-radius: 24px; }
+  .phones { flex-direction: row; gap: 8px; align-items: flex-start; }
+  .phone { width: calc(50vw - 24px); border-radius: 20px; }
+  .notch { width: 60px; height: 20px; }
   .divider { flex-direction: column; }
   .divider div { width: 1px; height: 40px; }
   .stepL { display: none; }
   .stepBar { gap: 4px; }
   .step, .stepActive { padding: 6px 10px; }
+}
+
+@media (max-width: 400px) {
+  .phone { width: calc(50vw - 16px); }
 }

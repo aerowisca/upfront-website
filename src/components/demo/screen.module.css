@@ -1,8 +1,32 @@
 /* Base */
-.screen { display: flex; flex-direction: column; height: 100%; background: #0D0D0D; color: #F5F0E8; font-size: 13px; overflow: hidden; }
+.screen { display: flex; flex-direction: column; height: 100%; background: #0D0D0D; color: #F5F0E8; font-size: 13px; overflow: hidden; container-type: inline-size; }
 .statusBar { display: flex; justify-content: space-between; padding: 6px 16px 2px; font-size: 10px; font-weight: 700; }
 .body { flex: 1; overflow: hidden; padding: 10px 14px; display: flex; flex-direction: column; gap: 8px; }
 .footer { padding: 10px 14px; border-top: 1px solid #2A2520; }
+
+@container (max-width: 200px) {
+  .screen { font-size: 9px; }
+  .statusBar { padding: 4px 10px 2px; font-size: 8px; }
+  .body { padding: 6px 8px; gap: 5px; }
+  .footer { padding: 6px 8px; }
+  .greeting { font-size: 11px !important; }
+  .heading { font-size: 11px !important; }
+  .postBtn { height: 30px !important; font-size: 10px !important; }
+  .submitBtn { height: 32px !important; font-size: 10px !important; }
+  .acceptBtn, .confirmBtn, .proofBtn, .skipBtn, .rejectBtn { padding: 6px !important; font-size: 9px !important; }
+  .runnerCard, .detailCard { padding: 8px !important; gap: 4px !important; }
+  .toggleBtn { height: 28px !important; font-size: 9px !important; }
+  .inputFilled, .locationPill { padding: 6px 8px !important; font-size: 9px !important; }
+  .escrowRow .escrowItem, .escrowRow .escrowTotal { padding: 4px 8px !important; font-size: 9px !important; }
+  .chatBubble { padding: 4px 8px !important; font-size: 9px !important; }
+  .doneEmoji { font-size: 28px !important; }
+  .doneTitle { font-size: 12px !important; }
+  .sonarRing { width: 44px !important; height: 44px !important; }
+  .sonarInner { font-size: 18px !important; }
+  .avatar { width: 22px !important; height: 22px !important; font-size: 10px !important; }
+  .annBanner { padding: 5px 8px !important; }
+  .proofImg { font-size: 28px !important; padding: 10px !important; }
+}
 
 /* Header */
 .header { display: flex; justify-content: space-between; align-items: center; padding: 8px 14px 10px; border-bottom: 1px solid #2A2520; }

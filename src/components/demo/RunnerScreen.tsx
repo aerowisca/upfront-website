@@ -80,11 +80,11 @@ function TaskDetail({ c }: { c: DemoConfig }) {
 }
 
 function RunnerChat({ c }: { c: DemoConfig }) {
-  const messages = c.chatMessages ?? [
+  const messages = (c.chatMessages ?? [
     { from: 'system' as const, text: '✅ You accepted. Complete & submit proof.' },
     { from: 'system' as const, text: `📍 ${c.from} → ${c.to}` },
     { from: 'me' as const, text: 'On my way! 🏃' },
-  ]
+  ]).slice(-3)
   return (
     <>
       <div className={s.chatHeader}>

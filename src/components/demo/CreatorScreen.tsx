@@ -100,10 +100,10 @@ function TaskChatWaiting({ c }: { c: DemoConfig }) {
 }
 
 function TaskChatProof({ c }: { c: DemoConfig }) {
-  const messages = c.chatMessages ?? [
+  const messages = (c.chatMessages ?? [
     { from: 'system' as const, text: '🤝 Runner accepted & is on the way!' },
     { from: 'them' as const, text: "Done! Here's your proof 📸" },
-  ]
+  ]).slice(-2) // show only last 2 to avoid overflow
   return (
     <>
       <div className={s.chatHeader}>

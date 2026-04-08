@@ -14,12 +14,9 @@ const CAMPUS_CONFIG = {
   proofEmoji: '📄',
   currency: 'MC',
   chatMessages: [
-    { from: 'system' as const, text: '✅ Priya accepted your task' },
-    { from: 'them' as const, text: 'bro the printout is costing ₹10' },
-    { from: 'me' as const, text: 'send me your UPI QR 👍' },
-    { from: 'them' as const, text: '📷 [QR Code]' },
-    { from: 'system' as const, text: '💸 ₹10 paid via UPI' },
-    { from: 'them' as const, text: 'got it! on my way to Aquamarine 🏃' },
+    { from: 'them' as const, text: 'bro the printout is ₹10' },
+    { from: 'me' as const, text: 'send UPI QR 👍' },
+    { from: 'them' as const, text: '📷 [QR sent] — paid ✓' },
   ],
 }
 

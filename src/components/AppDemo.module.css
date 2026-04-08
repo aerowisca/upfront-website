@@ -30,7 +30,8 @@
 
 /* Phone shell */
 .phone {
-  width: 270px;
+  width: min(270px, 42vw);
+  aspect-ratio: 9 / 19;
   background: #0D0D0D;
   border-radius: 44px;
   border: 2px solid #333;
@@ -39,6 +40,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 .notch {
   width: 90px; height: 28px;
@@ -52,12 +54,8 @@
 }
 .screen {
   flex: 1;
-  min-height: 520px;
   overflow: hidden;
   background: #0D0D0D;
-}
-@media (max-width: 680px) {
-  .screen { min-height: 360px; }
 }
 .homeBar {
   height: 20px;
@@ -93,8 +91,7 @@
 
 @media (max-width: 680px) {
   .phones { flex-direction: row; gap: 12px; align-items: flex-start; }
-  .phone { width: calc(50vw - 32px); max-width: 180px; }
-  .screen { min-height: 360px; font-size: 10px; }
+  .phone { width: calc(50vw - 32px); border-radius: 24px; }
   .divider { flex-direction: column; }
   .divider div { width: 1px; height: 40px; }
   .stepL { display: none; }
